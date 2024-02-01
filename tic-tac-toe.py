@@ -1,23 +1,12 @@
 import questionary
+import easyBot
+import mediumBot
+import hardBot
 
-def createBoard():
-    return [['_','_','_'],['_','_','_'],['_','_','_']]
 
-def printBoard(board):
-    boardStr = ""
-    for row in board:
-        boardStr += "|"
-        for elem in row:
-            boardStr += elem + "|"
-        boardStr += "\n"
-    return boardStr
 
-print(printBoard(createBoard()))
-def validMove(board, move):
-    pass
 
-def checkWin(board):
-    pass
+
 
 def startGameEasy():
     pass
