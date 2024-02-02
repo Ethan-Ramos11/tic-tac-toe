@@ -1,4 +1,6 @@
 import questionary
+from ticTacToeBots import easyBot, mediumBot, hardBot
+import random
 
 
 def validMove(board, move):
@@ -26,3 +28,23 @@ def getMove():
         validate=validateMove
     ).ask()
     return (int(row), int(col))
+
+
+def getLevel():
+    level = questionary.rawselect(
+        "What level would you like to play at?",
+        choices=["easy", "medium", "hard"])
+    if level == "easy":
+        return easyBot.EasyBot(getBotToken())
+    elif level == "medium":
+        return mediumBot.MediumBot(getBotToken())
+    else:
+        return hardBot.HardBot(getBotToken())
+
+
+def getBotToken():
+    order = random.randint(0, 1)
+    if order == 0:
+        return "X"
+    else:
+        return "O"
