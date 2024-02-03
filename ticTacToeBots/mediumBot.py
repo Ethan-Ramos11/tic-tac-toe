@@ -1,12 +1,21 @@
 import board
 
-
 class MediumBot:
-    token = ""
+  token = ""
 
-    def __init__(self,):
-        self.token = token
+  def __init__(self, token):
+    self.token = token 
 
     def hasWin(candidateMoves):
-        for move in candidateMoves:
-            pass
+      pass
+
+
+    def chooseMove(self, candidateMoves):
+      if self.hasWin(candidateMoves):
+        pass
+      elif self.hasBlock(candidateMoves):
+        pass
+      elif self.hasCorners(candidateMoves):
+        pass
+      else:
+        pass
